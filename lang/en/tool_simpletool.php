@@ -36,4 +36,5 @@ $string['table_header'] = 'Users';
 $string['username'] = 'Username';
 $string['firstname'] = 'First name';
 $string['lastname'] = 'Surname';
+$string['submission'] = 'Sunmission';
 
