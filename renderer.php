@@ -57,7 +57,7 @@ class tool_simpletool_renderer extends plugin_renderer_base {
 
         // Display the table.
         echo $this->output->header();
-        echo $this->render_from_template('tool_simpletool/table', $data);
+        echo $this->render_from_template('tool_simpletool/tableTest', $data);
         echo $this->output->footer();
 
     }
