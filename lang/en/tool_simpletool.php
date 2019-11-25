@@ -33,8 +33,14 @@ $string['index_header'] = 'Main page';
 $string['table_header'] = 'Users';
 
 // Table headers.
-$string['username'] = 'Username';
+//$string['username'] = 'Username';
+//$string['firstname'] = 'First name';
+//$string['lastname'] = 'Surname';
+//$string['submission'] = 'Sunmission';
+
+
+$string['title'] = 'Title';
+//$string['collaborate'] = 'Collaborate';
 $string['firstname'] = 'First name';
 $string['lastname'] = 'Surname';
-$string['submission'] = 'Sunmission';
-
+$string['submission'] = 'Submission';
