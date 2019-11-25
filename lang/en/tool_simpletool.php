@@ -39,8 +39,9 @@ $string['table_header'] = 'Users';
 //$string['submission'] = 'Sunmission';
 
 
+// Table headers.
 $string['title'] = 'Title';
-//$string['collaborate'] = 'Collaborate';
+$string['collaborate'] = 'Collaborate';
 $string['firstname'] = 'First name';
 $string['lastname'] = 'Surname';
 $string['submission'] = 'Submission';

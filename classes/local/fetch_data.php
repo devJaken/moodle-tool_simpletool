@@ -82,9 +82,10 @@ class fetch_data {
                        u.firstname, u.lastname
                   FROM {collaborate_submissions} s
                   JOIN {collaborate} c ON s.collaborateid = c.id
-                  JOIN {user} u ON s.userid = u.id";
+                  JOIN {user} u ON s.userid = u.id
+                  WHERE u.deleted = 0";
 
-        $data = $DB->get_records_sql($sql, ['deleted' => 0]);
+        $data = $DB->get_records_sql($sql);
         return $data;
 }
 }
