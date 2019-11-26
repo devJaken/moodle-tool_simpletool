@@ -74,18 +74,18 @@ class fetch_data {
         return $data;
     }
 
-    public static function collaborate_submission_data() {
-        global $DB;
+//    public static function collaborate_submission_data() {
+//        global $DB;
 
-        $sql = "SELECT s.id, s.collaborateid, s.page, s.userid, s.submission,
-                       c.name, c.title,
-                       u.firstname, u.lastname
-                  FROM {collaborate_submissions} s
-                  JOIN {collaborate} c ON s.collaborateid = c.id
-                  JOIN {user} u ON s.userid = u.id
-                  WHERE u.deleted = 0";
+//        $sql = "SELECT s.id, s.collaborateid, s.page, s.userid, s.submission,
+//                       c.name, c.title,
+//                       u.firstname, u.lastname
+//                  FROM {collaborate_submissions} s
+//                  JOIN {collaborate} c ON s.collaborateid = c.id
+//                  JOIN {user} u ON s.userid = u.id
+//                  WHERE u.deleted = 0";
 
-        $data = $DB->get_records_sql($sql);
-        return $data;
-}
+//        $data = $DB->get_records_sql($sql);
+//        return $data;
+//}
 }
