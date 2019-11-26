@@ -52,7 +52,7 @@ class tool_simpletool_renderer extends plugin_renderer_base {
         foreach ($records as $record) {
             $row = array();
             $row['name'] = $record->name;
-            echo($row);    
+            echo($row['name']);    
             $row['title'] = $record->title;
             $row['username'] = $record->username;
             $row['firstname'] = $record->firstname;
