@@ -37,18 +37,18 @@ defined('MOODLE_INTERNAL') || die();
  */
 class fetch_data {
 
-     public static function user_data() {
+    public static function user_data() {
         global $DB;
 
         $data = $DB->get_records('user', ['deleted' => 0], '', 'username, firstname, lastname');
 
         return $data;
-    }
+     }
 
     public static function resource_data() {
         global $DB;
 
-        $sql =   "SELECT COUNT(l.id) COUNT, l.course, c.fullname coursename
+        $sql = "SELECT COUNT(l.id) COUNT, l.course, c.fullname coursename
                     FROM {resource} l
               INNER JOIN {course} c ON l.course = c.id
                 GROUP BY course
