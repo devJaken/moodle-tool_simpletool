@@ -3,8 +3,9 @@
     "",
     "\\classes",
     "\\classes\\local",
-    "\\templates"
+    "\\lang",
+    "\\lang\\en"
   ],
-  "SelectedNode": "\\index.php",
+  "SelectedNode": "\\version.php",
   "PreviewInSolutionExplorer": false
 }
