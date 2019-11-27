@@ -36,14 +36,23 @@ class tool_simpletool_renderer extends plugin_renderer_base {
         $data = new stdClass();
 
         // Table headers.
-        $headers = array();
+        //$headers = array();
 
-        $headers[] = get_string('collaborate', 'tool_simpletool');
-        $headers[] = get_string('title', 'tool_simpletool');
-        $headers[] = get_string('firstname', 'tool_simpletool');
-        //$headers[] = get_string('username', 'tool_simpletool');
-        $headers[] = get_string('lastname', 'tool_simpletool');
-        $headers[] = get_string('submission', 'tool_simpletool');
+        //$headers[] = get_string('collaborate', 'tool_simpletool');
+        //$headers[] = get_string('title', 'tool_simpletool');
+        //$headers[] = get_string('firstname', 'tool_simpletool');
+        ////$headers[] = get_string('username', 'tool_simpletool');
+        //$headers[] = get_string('lastname', 'tool_simpletool');
+        //$headers[] = get_string('submission', 'tool_simpletool');
+        
+        $baseurl = '/admin/tool/simpletool/index.php';
+        $header = get_string('collaborate', 'tool_simpletool');
+        $url = new moodle_url($baseurl, ['sorting' => 'name']);
+        $headers['name'] = ['text' => $header, 'url'=> $url->out(false)];
+        $header = get_string('title', 'tool_simpletool');
+        $url = new moodle_url($baseurl, ['sorting' => 'title']);
+        $headers['title'] = ['text' => $header, 'url'=> $url->out(false)];
+
         $data->headers = $headers;
 
         $data->rows = array();

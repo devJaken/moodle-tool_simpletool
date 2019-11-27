@@ -37,10 +37,17 @@ $PAGE->set_pagelayout('report');
 $PAGE->set_title($title);
 $PAGE->set_heading(get_string('index_header', 'tool_simpletool'));
 
+
+//adding sortable headers
+$sorting = optional_param('sorting', 'name', PARAM_ALPHA);
+
 // Get some data
 //$data = fetch_data::user_data();
-$data = fetch_data::collaborate_submission_data();
+//$data = fetch_data::collaborate_submission_data();
+
+$data = fetch_data::collaborate_submission_data($sorting);
 
 // Call the renderer to display the data.
 $renderer = $PAGE->get_renderer('tool_simpletool');
 $renderer->display_table($data);
+

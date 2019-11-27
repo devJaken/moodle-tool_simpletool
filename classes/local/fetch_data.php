@@ -74,17 +74,42 @@ class fetch_data {
         return $data;
     }
 
-    public static function collaborate_submission_data() {
-            global $DB;
+    //public static function collaborate_submission_data() {
+    //        global $DB;
 
-            $sql = "SELECT s.id, s.collaborateid, s.page, s.userid, s.submission,
-                           c.name, c.title,
-                           u.firstname, u.lastname
-                      FROM {collaborate_submissions} s
-                      JOIN {collaborate} c ON s.collaborateid = c.id
-                      JOIN {user} u ON s.userid = u.id";
+    //        $sql = "SELECT s.id, s.collaborateid, s.page, s.userid, s.submission,
+    //                       c.name, c.title,
+    //                       u.firstname, u.lastname
+    //                  FROM {collaborate_submissions} s
+    //                  JOIN {collaborate} c ON s.collaborateid = c.id
+    //                  JOIN {user} u ON s.userid = u.id";
 
-            $data = $DB->get_records_sql($sql);
-            return $data;
+    //        $data = $DB->get_records_sql($sql);
+    //        return $data;
+    //}
+
+    public static function collaborate_submission_data($sorting) {
+        global $DB;
+
+        switch ($sorting) {
+
+                case 'name' : $sorting = 'c.name'; break;
+                case 'title' : $sorting = 'c.title'; break;
+                case 'firstname' : $sorting = 'u.firstname'; break;
+                case 'lastname' : $sorting = 'u.lastname'; break;
+            }
+
+        $sql = "SELECT s.id, s.collaborateid, s.page, s.userid, s.submission,
+                       c.name, c.title,
+                       u.firstname, u.lastname
+                  FROM {collaborate_submissions} s
+                  JOIN {collaborate} c ON s.collaborateid = c.id
+                  JOIN {user} u ON s.userid = u.id
+                 WHERE u.deleted = 0
+              ORDER BY $sorting ASC";
+
+        $data = $DB->get_records_sql($sql);
+
+        return $data;
     }
 }
