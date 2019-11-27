@@ -41,7 +41,7 @@ class tool_simpletool_renderer extends plugin_renderer_base {
         $headers[] = get_string('collaborate', 'tool_simpletool');
         $headers[] = get_string('title', 'tool_simpletool');
         $headers[] = get_string('firstname', 'tool_simpletool');
-        $headers[] = get_string('username', 'tool_simpletool');
+        //$headers[] = get_string('username', 'tool_simpletool');
         $headers[] = get_string('lastname', 'tool_simpletool');
         $headers[] = get_string('submission', 'tool_simpletool');
         $data->headers = $headers;
@@ -54,7 +54,7 @@ class tool_simpletool_renderer extends plugin_renderer_base {
             $row['name'] = $record->name;
             //echo($row['name']);    
             $row['title'] = $record->title;
-            $row['username'] = $record->username;
+            //$row['username'] = $record->username;
             $row['firstname'] = $record->firstname;
             $row['lastname'] = $record->lastname;
             $row['submission'] = $record->submission;
