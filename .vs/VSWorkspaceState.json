@@ -1,11 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\classes",
-    "\\classes\\local",
-    "\\lang",
+    "\\amd",
+    "\\amd\\src",
     "\\lang\\en"
   ],
-  "SelectedNode": "\\version.php",
+  "SelectedNode": "\\renderer.php",
   "PreviewInSolutionExplorer": false
 }

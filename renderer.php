@@ -33,6 +33,8 @@ class tool_simpletool_renderer extends plugin_renderer_base {
 
     public function display_table($records) {
 
+    $this->page->requires->js_call_amd('tool_simpletool/amd_modal', 'init');
+
         $data = new stdClass();
 
         // Table headers.

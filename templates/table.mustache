@@ -34,31 +34,34 @@
 }}
 
 <div class="card">
-  <div class="card-body">
-    <h2 class="card-title">{{# str }} table_header, tool_simpletool {{/ str }}</h2>
-      <div class="table-responsive">
-        <table class="table table-striped">
-            <thead>
-            {{#headers}}
-              <th><a href={{{name.url}}}>{{name.text}}</a></th>
-              <th><a href={{{title.url}}}>{{title.text}}</a></th>
-              <th><a href={{{firstname.url}}}>{{firstname.text}}</a></th>
-              <th><a href={{{lastname.url}}}>{{lastname.text}}</a></th>
-              <th>{{# str }} submission, tool_simpletool {{/ str }}</th>
-            {{/headers}}
-          </thead>
-          <tbody>
-             {{#rows}}
-              <tr class="danger">
-                <td>{{name}}</td>
-                <td>{{title}}</td>
-                <td>{{firstname}}</td>
-                <td>{{lastname}}</td>
-                <td>{{#shortentext}} 40, {{{submission}}} {{/shortentext}}</td>
-              </tr>
-            {{/rows}}
-        </tbody>
-        </table>
-      </div>
-  </div>
+    <div class="card-body">
+        <h2 class="card-title">{{# str }} table_header, tool_simpletool {{/ str }}</h2>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    {{#headers}}
+                <th><a href={{{name.url}}}>{{name.text}}</a></th>
+                <th><a href={{{title.url}}}>{{title.text}}</a></th>
+                <th><a href={{{firstname.url}}}>{{firstname.text}}</a></th>
+                <th><a href={{{lastname.url}}}>{{lastname.text}}</a></th>
+                <th>{{# str }} submission, tool_simpletool {{/ str }}</th>
+                {{/headers}}
+                </thead>
+                <tbody>
+                    {{#rows}}
+                    <tr class="danger">
+                        <td>{{name}}</td>
+                        <td>{{title}}</td>
+                        <td>{{firstname}}</td>
+                        <td>{{lastname}}</td>
+                        <td>{{#shortentext}} 40, {{{submission}}} {{/shortentext}}</td>
+                    </tr>
+                    {{/rows}}
+                </tbody>
+            </table>
+        </div>
+        <button type="button" class="btn btn-primary" id="tool_simpletool_about">
+            {{# str }} about, tool_simpletool {{/ str }}
+        </button>
+    </div>
 </div>
